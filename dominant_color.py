@@ -21,9 +21,9 @@ Navy=(0,0,128)
 color_list=[Black,White,Red,Lime,Blue,Yellow
             ,Cyan,Magenta,Silver,Gray,Maroon,
             Olive,Green,Purple,Teal,Navy]
-result_list=["Black","White","Red","Lime","Blue","Yellow"
-            ,"Cyan","Magenta","Silver","Gray","Maroon",
-            "Olive","Green","Purple","Teal","Navy"]
+result_list=["BLACK","WHITE","RED","LIME","BLUE","YELLOW"
+            ,"CYAN","MAGENTA","SILVER","GRAY","MAROON",
+            "OLIVE","GREEN","PURPLE","TEAL","NAVY"]
 def dominant_color(url):
     ct=ColorThief(url)
     dominant_color=ct.get_color(quality=1)
