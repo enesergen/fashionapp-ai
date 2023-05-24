@@ -1,12 +1,11 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI
 from models import Clothes
 from keras.models import load_model
 from clothes_classifying import image_classifying
 from dominant_color import dominant_color
-from PIL import Image
 import requests
-from io import BytesIO
 import shutil
+import os
 app=FastAPI()
 
 model=load_model("C:/Python/tensorflow/Model_6_h5.h5")
@@ -26,6 +25,10 @@ async def clothes_classifying(clothes:Clothes):
     print(clothes_type)
     dominant_color1=dominant_color(img_path)
     print(dominant_color)
+    if os.path.exists("img.jpg"):
+        os.remove("img.jpg")
+    else:
+        print("Dosya mevcut değil")
     return {"clothes_type":clothes_type,
             "dominant_color":dominant_color1}
 
