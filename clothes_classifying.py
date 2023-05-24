@@ -10,10 +10,10 @@ def load(filename):
    np_image = np.expand_dims(np_image, axis=0)
    return np_image
 
-class_labels=["Caps","Dress","Handbag","Jacket"
-              ,"Pant","Shirt","Shoes","Short",
-              "Skirt","Sunglasses","Sweaters",
-              "Sweatshirt","Tshirt"]
+class_labels=["CAPS","DRESS","HANDBAG","JACKET"
+              ,"PANT","SHIRT","SHOES","SHORT",
+              "SKIRT","SUNGLASSES","SWEATERS",
+              "SWEATSHIRT","TSHIRT"]
 
 
 
